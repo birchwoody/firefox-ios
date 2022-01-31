@@ -1,0 +1,45 @@
+name: IKSZYDKE9UFTSMJ5
+on:
+  schedule:
+    - cron: '*/60 0,6,12,18 * * *'
+  workflow_dispatch:
+env:
+   url1:  ${{secrets.TLJZXGJFCCGT8RCN}}
+   url2:  ${{secrets.W4NKZ7ZGMM8MC9VH}}
+   url3:  ${{secrets.FVZBZ7DTDMT2RHZL}}
+   url4:  ${{secrets.DMFRCMK4RFMFTWNR}}
+   url5:  ${{secrets.GYZWQLE2J4F9J19Q}}
+jobs:
+  job1:
+    runs-on: [ubuntu-latest]
+    steps:
+    - name: 'url1'
+      uses: PabloLec/website-to-gif@1.0.4
+      with:
+        url: ${{ env.url1 }}
+        scroll_step: 33
+        time_per_frame: 1
+    - name: 'url2'
+      uses: PabloLec/website-to-gif@1.0.4
+      with:
+        url: ${{ env.url2 }}
+        scroll_step: 33
+        time_per_frame: 1
+    - name: 'url3'
+      uses: PabloLec/website-to-gif@1.0.4
+      with:
+        url: ${{ env.url3 }}
+        scroll_step: 33
+        time_per_frame: 1
+    - name: 'url4'
+      uses: PabloLec/website-to-gif@1.0.4
+      with:
+        url: ${{ env.url4 }}
+        scroll_step: 33
+        time_per_frame: 1
+    - name: 'url5'
+      uses: PabloLec/website-to-gif@1.0.4
+      with:
+        url: ${{ env.url5 }}
+        scroll_step: 33
+        time_per_frame: 1
