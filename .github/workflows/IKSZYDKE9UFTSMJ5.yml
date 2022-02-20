@@ -1,7 +1,7 @@
 name: IKSZYDKE9UFTSMJ5
 on:
   schedule:
-    - cron: '*/60 0,6,12,18 * * *'
+    - cron: '*/60 1,5,13,20 * * *'
   workflow_dispatch:
 env:
    url1:  ${{secrets.TLJZXGJFCCGT8RCN}}
@@ -9,6 +9,7 @@ env:
    url3:  ${{secrets.FVZBZ7DTDMT2RHZL}}
    url4:  ${{secrets.DMFRCMK4RFMFTWNR}}
    url5:  ${{secrets.GYZWQLE2J4F9J19Q}}
+   url6:  ${{secrets.FS79AMTMQUUNZNZH}}
 jobs:
   job1:
     runs-on: [ubuntu-latest]
@@ -41,5 +42,11 @@ jobs:
       uses: PabloLec/website-to-gif@1.0.4
       with:
         url: ${{ env.url5 }}
+        scroll_step: 33
+        time_per_frame: 1
+    - name: 'url6'
+      uses: PabloLec/website-to-gif@1.0.4
+      with:
+        url: ${{ env.url6 }}
         scroll_step: 33
         time_per_frame: 1
